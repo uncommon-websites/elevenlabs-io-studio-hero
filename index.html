@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElevenLabs Hero Recreation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #8ba0f3 0%, #9b9be0 40%, #9c6d8e 100%);
+        }
+        /* Custom scrollbar for the editor area to look cleaner */
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background-color: #e5e7eb;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- Navigation -->
+    <nav class="w-full bg-white pt-5 pb-4 px-6 md:px-8">
+        <div class="max-w-[1400px] mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-1">
+                <span class="text-xl font-bold tracking-tight">IIElevenLabs</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8 text-[15px] font-medium text-gray-700">
+                <a href="#" class="hover:text-black transition-colors">Creative Platform</a>
+                <a href="#" class="hover:text-black transition-colors">Agents Platform</a>
+                <a href="#" class="hover:text-black transition-colors">Developers</a>
+                <a href="#" class="hover:text-black transition-colors">Resources</a>
+                <a href="#" class="hover:text-black transition-colors">Enterprise</a>
+                <a href="#" class="hover:text-black transition-colors">Pricing</a>
+            </div>
+
+            <!-- Auth Buttons -->
+            <div class="flex items-center gap-3">
+                <button class="px-5 py-2 rounded-full border border-gray-200 text-sm font-medium hover:bg-gray-50 transition-colors">Log in</button>
+                <button class="px-5 py-2 rounded-full bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Text Section -->
+    <section class="w-full px-6 md:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
+        <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Headline & CTA -->
+            <div class="lg:col-span-7">
+                <h1 class="text-5xl md:text-6xl lg:text-[5.5rem] leading-[0.95] font-medium tracking-tight text-black mb-10">
+                    The best AI audio models in <br class="hidden lg:block"> one powerful editor
+                </h1>
+                <button class="px-8 py-4 bg-black text-white rounded-full text-[17px] font-medium hover:bg-gray-800 transition-transform transform hover:scale-105">
+                    Try Studio for free
+                </button>
+            </div>
+
+            <!-- Subtext -->
+            <div class="lg:col-span-5 pt-2 md:pt-4">
+                <p class="text-lg md:text-[1.25rem] leading-relaxed text-gray-800 font-normal">
+                    Built for video creators, podcasters and audiobook authors — bring your stories to life with expressive AI voiceovers, music and sound effects, and real-world recordings.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image / UI Mockup Section -->
+    <section class="w-full px-4 pb-10">
+        <div class="max-w-[1400px] mx-auto rounded-[32px] hero-gradient p-6 md:p-12 lg:p-20 relative overflow-hidden min-h-[600px] lg:min-h-[800px]">
+            
+            <!-- UI Container -->
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-7xl mx-auto relative z-10">
+                
+                <!-- UI Header -->
+                <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white">
+                    <div class="flex items-center gap-6">
+                        <span class="font-semibold text-gray-800 text-sm">Studio 3.0</span>
+                        <div class="flex items-center gap-4 text-gray-400">
+                            <!-- Undo Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"/></svg>
+                            <!-- Redo Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 14 5-5-5-5"/><path d="M20 9H9.5A5.5 5.5 0 0 0 4 14.5v0A5.5 5.5 0 0 0 9.5 20H13"/></svg>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-gray-500 text-sm font-medium cursor-pointer hover:text-gray-800">Share</span>
+                        <button class="bg-black text-white px-4 py-1.5 rounded-lg text-xs font-bold tracking-wide">Export</button>
+                    </div>
+                </div>
+
+                <!-- UI Body -->
+                <div class="flex flex-col lg:flex-row h-[600px] bg-white">
+                    
+                    <!-- Left: Text Editor -->
+                    <div class="w-full lg:w-1/2 p-8 lg:p-12 overflow-y-auto custom-scroll border-r border-gray-100">
+                        <div class="flex gap-4 mb-8">
+                            <div class="mt-1.5 w-3 h-3 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex-shrink-0"></div>
+                            <div class="border-l-2 border-gray-800 pl-4">
+                                <p class="font-semibold text-gray-900 text-lg">ElevenLabs proudly introduces Studio 3.0.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 mb-8">
+                            <div class="w-3 flex-shrink-0"></div> <!-- Spacer for alignment -->
+                            <div class="border-l-2 border-gray-200 pl-4">
+                                <p class="text-gray-500 text-base leading-relaxed">
+                                    You can harness all of our audio models in one powerful editor. Now with full video integration.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 mb-8">
+                            <div class="w-3 flex-shrink-0"></div>
+                            <div class="border-l-2 border-gray-300 pl-4">
+                                <p class="text-gray-400 text-base leading-relaxed">
+                                    Giving you the ability to add new voiceovers, generate bespoke background music, and bring it to life with some sound effects too.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-3 flex-shrink-0"></div>
+                            <div class="border-l-2 border-gray-200 pl-4">
+                                <p class="text-gray-300 text-base leading-relaxed">
+                                    The Studio timeline allows for precise editing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Visual Preview -->
+                    <div class="w-full lg:w-1/2 bg-gray-50 p-8 lg:p-12 flex items-center justify-center relative">
+                        <!-- Main Image -->
+                        <div class="w-full h-full relative rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://placehold.co/600x800/2563eb/orange?text=+" alt="Studio Preview" class="w-full h-full object-cover mix-blend-overlay opacity-80 absolute inset-0">
+                            <!-- Gradient overlay to mimic the artistic blur in screenshot -->
+                            <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 via-transparent to-orange-500 opacity-80 mix-blend-multiply"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <!-- Abstract blurry shape simulation -->
+                                <div class="w-48 h-48 bg-orange-500 rounded-full blur-3xl opacity-60"></div>
+                                <div class="w-48 h-48 bg-blue-600 rounded-full blur-3xl opacity-60 -ml-20"></div>
+                            </div>
+                            <!-- Actual image placeholder on top -->
+                            <img src="https://placehold.co/600x800/transparent/transparent" class="relative z-10 w-full h-full object-cover">
+                        </div>
+
+                        <!-- Sidebar Icons (Floating right inside the gray area) -->
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-6 text-gray-400">
+                            <button class="p-2 hover:bg-white hover:shadow-sm rounded-lg transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                            </button>
+                            <button class="p-2 hover:bg-white hover:shadow-sm rounded-lg transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                            </button>
+                            <button class="p-2 hover:bg-white hover:shadow-sm rounded-lg transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Voice Chat Widget -->
+            <div class="absolute bottom-8 right-8 md:bottom-12 md:right-12 z-20">
+                <div class="bg-white rounded-full p-1.5 shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center gap-2 pr-4">
+                    <!-- Orb Icon -->
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-white opacity-20 rotate-45 transform translate-x-1/2"></div>
+                    </div>
+                    
+                    <!-- Button -->
+                    <button class="bg-black text-white text-[11px] font-bold px-4 py-2 rounded-full flex items-center gap-2 tracking-wider">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        VOICE CHAT
+                    </button>
+
+                    <!-- Language Selector -->
+                    <div class="flex items-center gap-1 ml-1 cursor-pointer">
+                        <div class="w-5 h-5 rounded-full overflow-hidden border border-gray-200">
+                            <img src="https://placehold.co/20x20/firebrick/white?text=US" alt="US Flag" class="w-full h-full object-cover">
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                </div>
+                <div class="text-[10px] text-gray-500 text-right mt-2 pr-2 opacity-60">
+                    Powered by ElevenLabs Agents
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
